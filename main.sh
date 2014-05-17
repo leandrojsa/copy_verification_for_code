@@ -12,10 +12,9 @@ cd $dir
 
 for file in `ls *.${extension}`
 do
-    echo $file
+    
     total_lines=`cat $file | sed '/^$/d' | wc -l`
     #TODO:    `cat $file | sed '/^\s*\VARIABLE COMMENT_CHAR/d;/^\s*$/d' | wc -l`
-    echo $total_lines
     for cmp_file in `ls *.${extension}`
     do
         if [ $cmp_file != $file ]
@@ -25,8 +24,9 @@ do
             suspect_file=$(echo $percent '<=' $limit_percent | bc -l)
             if [ $suspect_file -eq 1 ]
             then
-                echo "\tSimilaridade supeita: $cmp_file"
-                printf "\t\t%.3f\n" $percent
+                echo $file
+                echo "\tSimilarity suspected: $cmp_file"
+                printf "\t\tDegree: %.3f\n" $percent
             fi
         fi        
     done    

@@ -1,4 +1,4 @@
-copy_verification_for_code
+Copy Verification for Code
 ==========================
 
 (Script in Shell for verification of copies of source code for homeworks)
@@ -8,12 +8,12 @@ Script para identificação de cópia em códigos fontes, voltado principalmente
 
 O script compara os códigos fontes de uma determinada extensão contido em uma mesma pasta. Assim o programa tenta identificar possíveis códigos com alto grau de semelhança. No caso de alguma suspeita indica na saída do terminal quais os arquivos envolvidos.
 
-Relato:
-Sou professor de uma disciplina na Universidade Federal da Bahia e consegui ter bons resultados na identificação de cópias. O script simplifica muito a verificação dos trabalhos dos alunos, o que consequentemente passa a coibir tais práticas. Com esse script identifiquei cópias não só de trabalhos totalmente idênticos, mas também códigos que mudava somente o nome de variáveis ou até mesmo possuia grande blocos iguais.
+##Relato de uso:
+
+> Sou professor de uma disciplina na Universidade Federal da Bahia e consegui ter bons resultados na identificação de cópias. O script simplifica muito a verificação dos trabalhos dos alunos, o que consequentemente passa a coibir tais práticas. Com esse script identifiquei cópias não só de trabalhos totalmente idênticos, mas também códigos que mudava somente o nome de variáveis ou até mesmo possuia grande blocos iguais.
 
 
-
-How to use:
+##How to use:
 
 The script is executed for main.sh file and get two arguments:
 
@@ -21,8 +21,15 @@ The script is executed for main.sh file and get two arguments:
 
 + Second argument relative directory of files
 
+### Example:
 
-TO DO:
+`$ sh main.sh asm /home/user/homeworks`
+
+`$ sh main.sh c /home/user/projects`
+
+
+##TO DO:
+
 + Incrementar um mecanismo para ignorar comentários (de linha e de bloco) 
 
 + Ter a capacidade de analisar projetos onde o código fonte esteja distribuído vários arquivos.
